@@ -1,0 +1,75 @@
+\documentclass[12pt, letterpaper, oneside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{vmargin}
+\usepackage{fancyvrb}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage[utf8]{inputenc}       % Codificación de entrada UTF-8
+\usepackage[T1]{fontenc}          % Codificación de fuentes moderna
+\usepackage[spanish]{babel}       % Idioma español, separación silábica, etc.
+\usepackage{amsmath, amssymb}     % Paquetes matemáticos AMS
+\usepackage{graphicx}             % Para incluir imágenes
+\usepackage{listings}             % Para incluir código fuente formateado
+\usepackage{geometry}             % Para márgenes personalizados
+\usepackage{float}                % Mejor control de flotantes (figuras, tablas) [H]
+\usepackage{hyperref}             % Para enlaces clickeables (URLs, referencias internas)
+\usepackage{caption}              % Para personalizar leyendas de figuras/tablas
+\usepackage{siunitx}              % Para unidades del SI (ej. \SI{1}{\giga\hertz})
+
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{lipsum}
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\usepackage{url}
+\usepackage{listings}  % Paquete para código
+\usepackage{xcolor}    % Colores para resaltar sintaxis
+\usepackage{datetime}
+\usepackage{float}
+\usepackage[hidelinks]{hyperref}
+\usepackage[es-ES]{datetime2}
+\usepackage[spanish]{babel}
+\newdateformat{monthyeardate}{%
+	\monthname[\THEMONTH], \THEYEAR}
+	
+\setpapersize{A4}
+\setmargins{2.2cm}			%Márgen izquierdo
+			{1cm}			%Márgen superior
+			{16.5cm}		%Ancho del área de impresión
+			{23.42cm}		%Longitud del área de impresión
+				{30pt}		%Encabezado
+			{5mm}			%Espacio entre el encabezado y el documento
+			{2pt}			%Pié de página
+			{5mm}			%Espacio entre el pié de página y el documento 
+			
+\begin{document}
+
+	\include{Caratula}
+	
+	%--Encabezado y Pié de Página--%
+	\pagestyle{fancy}
+    \fancyhf{}
+    \fancyhead[R]{\includegraphics[width=7cm]{img/color_UNC-FCEFyN.png}}
+    \fancyhead[L]{Sistemasd de Comùtacion - Practico 0}
+    \fancyfoot[R]{\thepage}
+    \renewcommand{\headrulewidth}{0.1pt}
+
+    % agregamos el indice
+    \tableofcontents
+    \newpage
+
+    \input{Desarrollo_Teorico}
+
+    
+	\pagebreak
+\end{document}
